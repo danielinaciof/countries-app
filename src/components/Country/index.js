@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import'./styles.scss';
-export function Country({flag,name,capitals,population,area}) {
+export function Country({ cca3, flag, name,capitals,population,area}) {
     
     return (
+        <Link to={`country/${cca3}`}>
         <article className='country'>
         <div className="country-flag"
         style={{
@@ -10,8 +12,8 @@ export function Country({flag,name,capitals,population,area}) {
        >
 
        </div>
-       <div className="country-name">
-           {name}
+       <div className="country-name"> 
+           {name} 
        </div>
        <div className="country-capital">
        {capitals && capitals.map(capital => capital).join(',')}
@@ -24,5 +26,6 @@ export function Country({flag,name,capitals,population,area}) {
            {area}
        </div>
         </article>
+        </Link>
     )
 }

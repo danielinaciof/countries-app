@@ -1,18 +1,30 @@
 
-import { CountriesTable } from './components/CountriesTable';
+import{
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom'
+
 import { Header } from './components/Header';
-import { Search } from './components/Search';
+import { Country } from './pages/Country';
+
+import { Home } from './pages/Home';
+
 import './styles/global.scss'
 
 function App() {
   return (
     <>
+    <BrowserRouter>
       <Header />
       <main>
-        <Search />
-        <CountriesTable />
-      </main>
+       <Routes>
+         <Route index path="/" element={<Home/>}/>
+        <Route path="country/:cca3" element={<Country/>}/>
 
+       </Routes>
+      </main>
+      </BrowserRouter>
     </>
 
 

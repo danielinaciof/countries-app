@@ -1,19 +1,18 @@
 import'./styles.scss'
-export function Search(){
+
+export function Search({search, total}){
     return(
        <div className="search">
            <div className="search-results">
-               250 countries found
+               {total} countries found
            </div>
-           <for className="search-results"></for>
+           <form className="search-form">
            <input
-           placeholder="search"
-           
-           >
-           </input>
+                placeholder="search"
+                type="text"
+                onChange={search}
+            />
+           </form>
        </div>
-      
-       
-
     )
-}
+} 
