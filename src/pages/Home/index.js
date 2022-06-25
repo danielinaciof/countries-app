@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CountriesTable } from "../../components/CountriesTable";
 import { Search } from "../../components/Search";
-import { Country } from '../Country';
+/*import { Country } from '../Country';*/
 
 export function Home(){
     const[countries, setCountries]=useState([]);

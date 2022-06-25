@@ -22,7 +22,7 @@ export function Country() {
       setCountry(dataCountry);
       
       const dataBorder = await Promise.all(
-        (dataCountry.borders || []) .map((border) => fetchCountry(border)));
+        (dataCountry.borders || []).map((border) => fetchCountry(border)));
      
       setBorders(dataBorder);
     }
